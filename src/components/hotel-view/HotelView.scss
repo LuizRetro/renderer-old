@@ -1,0 +1,173 @@
+.nitro-hotel-view {
+    display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	color:#000;
+	
+	.avatar-image {
+		bottom: 12px;
+		left: 57px;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.background {
+		top:0;
+		height: 100%;
+		width: 100%;
+		background-position: left;
+		background-repeat: repeat-y;
+	}
+
+	.drape {
+        width: 100%;
+        height: 100%;
+		left: 0px;
+		top: 0;
+		animation-iteration-count: 1;
+		animation-name: slideDown;
+		animation-duration: 1s;
+		z-index: 3;
+        background-repeat: no-repeat;
+	}
+
+	.sun {
+        width: 100%;
+        height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+        background-repeat: no-repeat;
+		background-position: top center;
+	}
+
+	.left {
+        top:0;
+		right:0;
+		bottom: 0;
+		left: 0;
+		animation-iteration-count: 1;
+		animation-name: slideUp;
+		animation-duration: 1s;
+        background-repeat: no-repeat;
+		background-position: left bottom;
+	}
+
+	.right {
+        width: 100%;
+        height: 100%;
+		right: 0;
+		bottom: 0;
+		animation-iteration-count: 1;
+		animation-name: slideUp;
+		animation-duration: 1s;
+        background-repeat: no-repeat;
+		background-position: right bottom;
+	}
+
+	.right-repeat {
+        width: 100%;
+        height: 100%;
+		right: 0;
+		top: 0;
+        background-repeat: no-repeat;
+		background-position: right top;
+	}
+
+	.landing-widgets {
+		z-index: 9;
+		position: relative;
+
+	}
+
+	.widget-slot {
+		z-index: 9;	
+	}
+
+	hr {
+		background: $black;
+		box-shadow: 0 1px rgba($white,.5);
+		opacity: 0.5
+	}
+}
+
+.lulz {
+	margin: 0;
+	padding: 0;
+}
+.landing-view {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #4D9EDE;
+}
+.landing-view .bg-left {
+	background-color: #5EBFFF;
+	width: 331px;
+	position: absolute;
+	height: 100%;
+	background-image: url(https://i.imgur.com/t1r0WIz.png);
+	background-position: left calc(100% + 273px) bottom -297px;
+	animation-iteration-count:infinite;
+	animation-name:cloudLeft;
+	animation-duration:31s;
+	animation-timing-function: linear;
+}
+.landing-view .bg-right {
+	background-color: #4D9EDE;
+	width: calc(100% - 331px);
+	position: absolute;
+	height: 100%;
+	right: 0px;
+	background-image: url(https://i.imgur.com/hJ0BFbW.png);
+	background-repeat: no-repeat;
+	background-position: left -330px bottom -1173px;
+	animation-iteration-count:infinite;
+	animation-name:cloudRight;
+	animation-duration:31s;
+	animation-timing-function: linear;
+}
+
+.landing-view .left {
+	height: 1260px;
+	width: 1260px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-image: url(https://cdn.discordapp.com/attachments/734957811879903254/1019873598728589383/Langin-BG.png);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	animation-iteration-count:1;
+	animation-name:slideUp;
+	animation-duration:1.5s;
+}
+.landing-view .right {
+	height: 463px;
+	width: 526px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+.landing-view .drape {
+	height: 200px;
+	width: 145px;
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	background-image: url(https://bobbax.fr/storage/img/hotel_view/reception_logo_drape.png);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	animation-iteration-count:1;
+	animation-name:slideDown;
+	animation-duration:1.5s;
+}
+   @KEYframes  slideDown{ 0%{top:-100%}to {top:0} }
+   @KEYframes  slideUp{0%{bottom:-100%}to{bottom:0}}
+   @KEYframes  slideRight{0%{right:-100%}to{right:0}}
+   @KEYframes  slideLeft{0%{left:-100%}to{left:0}}
+
+@import './views/widgets/HotelViewWidgets';
